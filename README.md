@@ -54,5 +54,16 @@ c:\kafka\kafka_2.13-2.5.0\bin\windows>kafka-console-consumer.bat --bootstrap-ser
 Topics "PersonOutputIndiaUsersTopic" and "PersonOutputUSAUsersTopic" have be used in the examples to demonstrate how 
 we can do kafka streams condition based filtering and redirection to different topics.
 
+####################  To Run Orders Example, Create Following Topics ####################
+
+c:\kafka\kafka_2.13-2.5.0\bin\windows>kafka-topics.bat  --create --zookeeper localhost:2181 --replication-factor 1   --partitions 1 --topic OrderDetailsTopic1
+Created topic OrderDetailsTopic1.
+
+c:\kafka\kafka_2.13-2.5.0\bin\windows>kafka-topics.bat  --create --zookeeper localhost:2181 --replication-factor 1   --partitions 1 --topic IndiaOrdersOutputTopic
+Created topic IndiaOrdersOutputTopic.
+
+c:\kafka\kafka_2.13-2.5.0\bin\windows>kafka-topics.bat  --create --zookeeper localhost:2181 --replication-factor 1   --partitions 1 --topic USAOrdersOutputTopic
+Created topic USAOrdersOutputTopic.
+
 
 
